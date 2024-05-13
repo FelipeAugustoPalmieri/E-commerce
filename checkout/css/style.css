@@ -1,0 +1,628 @@
+
+.faça-o-login {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #8d8989;
+  text-decoration: none;
+}
+
+.login-container {
+  float: right; /* Alinha o contêiner à direita */
+  margin-right: 20px; /* Adiciona um espaço à direita para separá-lo do botão */
+}
+
+.register a {
+  font-family: Arial, sans-serif; /* Escolha uma fonte adequada */
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme desejado */
+  color: #8d8989; /* Escolha uma cor para o texto */
+  text-decoration: none; /* Remova o sublinhado padrão do link */
+}
+
+.register a:hover {
+  text-decoration: underline; /* Adicione um sublinhado ao passar o mouse sobre o link */
+}
+
+
+.msg-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* ou o tamanho desejado */
+  z-index: 9999; /* para garantir que fique acima de outros elementos, se necessário */
+}
+
+
+.msg {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  border: solid 1px #000;
+  text-align: center;
+}
+
+.msg.error {
+  color: #842029;
+  background-color: #F8D7DA;
+  border-color: #F5C2C7;
+}
+
+.msg.success {
+  color: #0F5132;
+  background-color: #D1E7DD;
+  border-color: #BADBCC;
+}
+/* Estilos para o bloco do botão "Cadastrar" */
+.submit-button {
+  margin-top: 20px; /* Ajuste a margem superior conforme necessário */
+  text-align: center; /* Centraliza o botão horizontalmente */
+}
+
+.submit-button input[type="submit"] {
+  padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+  background-color: #333; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  cursor: pointer; /* Mostra o cursor de ponteiro ao passar por cima */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
+}
+
+.submit-button input[type="submit"]:hover {
+  background-color: #555; /* Altera a cor de fundo ao passar por cima */
+}
+
+
+/* Estilizando o checkbox */
+#aceitar_termos {
+  margin-top: 15px; /* Ajuste este valor conforme necessário */
+}
+
+/* Estilizando o label */
+label[for="aceitar_termos"] {
+  margin-top: 10px; /* Ajuste este valor conforme necessário */
+ 
+
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/poppins/Poppins-Regular.ttf"); }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Poppins-Regular";
+  font-size: 13px;
+  margin: 0;
+  background: url("../images/form-wizard-bg.jpg") center bottom;
+  background-size: cover; }
+
+:focus {
+  outline: none; }
+
+textarea {
+  resize: none; }
+
+input, textarea, select, button {
+  font-family: "Poppins-Regular";
+  font-size: 13px;
+  color: #333; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer; }
+  select option[value=""][disabled] {
+    display: none; }
+
+p, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+textarea {
+  resize: none; }
+
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+.wrapper {
+  max-width: 1400px;
+  display: flex;
+  height: 100vh;
+  margin: auto;
+  align-items: center; }
+
+.wizard {
+  width: 451px;
+  position: relative;
+  height: 656px;
+  margin-left: 14.7%; }
+
+.steps .current-info, .steps .number {
+  display: none; }
+
+.avartar {
+  display: block;
+  text-align: center;
+  margin-bottom: 29px; }
+
+.steps {
+  height: 2px;
+  position: absolute;
+  width: 39.91%;
+  background: #b7b2ab;
+  bottom: -52px;
+  left: 50%;
+  transform: translateX(-50%); }
+  .steps ul {
+    height: 2px;
+    position: absolute;
+    background: #333;
+    width: 33.33%;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease; }
+  .steps:before {
+    content: "1";
+    color: #333;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    font-size: 13px;
+    font-family: "Poppins-Regular";
+    transition: all 0.3s ease; }
+  .steps:after {
+    content: "3";
+    color: #333;
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    font-size: 13px;
+    font-family: "Poppins-Regular"; }
+  .steps.step-2 ul {
+    width: 66.67%;
+    transition: all 0.3s ease; }
+  .steps.step-2:before {
+    content: '2';
+    left: 63.67%;
+    transition: all 0.3s ease; }
+  .steps.step-3 ul {
+    width: 100%;
+    transition: all 0.3s ease; }
+  .steps.step-3:before {
+    content: '';
+    left: 100%;
+    transition: all 0.1s ease; }
+
+    .inner-pay {
+      
+        padding: 50px 100px;
+        background: #fff;
+        height: 550px; /* Ajuste conforme necessário */
+        margin-left: 200px;
+        overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 1); /* Adiciona sombreamento nas laterais */
+    }
+  
+    /* Estiliza a barra de rolagem */
+    .inner-pay::-webkit-scrollbar {
+        width: 10px; /* Largura da barra de rolagem */
+       
+    }
+    
+    .inner-pay::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3); /* Cor do botão da barra de rolagem */
+        border-radius: 5px; /* Borda arredondada */
+   
+    }
+    
+    .inner-pay::-webkit-scrollbar-track {
+        background-color: transparent; /* Cor de fundo da barra de rolagem */
+    }
+    
+    /* Oculta as setas de rolagem */
+    .inner-pay::-webkit-scrollbar-button {
+        display: none;
+    }
+    
+
+
+
+    .inner-login {
+      padding: 50px 100px;
+      background: #fff;
+      height: 550px; /* Ajuste conforme necessário */
+      margin-left: 200px;
+      overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 1); /* Adiciona sombreamento nas laterais */
+  }
+
+
+
+  
+  /* Estiliza a barra de rolagem */
+  .inner-login::-webkit-scrollbar {
+      width: 10px; /* Largura da barra de rolagem */
+     
+  }
+  
+  .inner-login::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3); /* Cor do botão da barra de rolagem */
+      border-radius: 5px; /* Borda arredondada */
+ 
+  }
+  
+  .inner-login::-webkit-scrollbar-track {
+      background-color: transparent; /* Cor de fundo da barra de rolagem */
+  }
+  
+  /* Oculta as setas de rolagem */
+  .inner-login::-webkit-scrollbar-button {
+      display: none;
+  }
+
+  
+
+.inner-register {
+  padding: 50px 58px;
+  background: #fff;
+  height: 650px; 
+  margin-left: 200px;
+}
+
+.form-row {
+  margin-bottom: 26px; }
+  .form-row.form-group {
+    display: flex; }
+    .form-row.form-group .form-holder {
+      width: 50%;
+      margin-right: 25px; }
+      .form-row.form-group .form-holder:last-child {
+        margin-right: 0; }
+
+        .form-row-login {
+          margin-bottom: 26px; }
+          .form-row.form-group {
+            display: flex; }
+            .form-row.form-group .form-holder {
+              width: 50%;
+              margin-right: 25px; }
+              .form-row.form-group .form-holder:last-child {
+                margin-right: 0; }
+
+
+.form-holder {
+  position: relative; }
+  .form-holder i {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 17px;
+    color: #333; }
+    .form-holder i.small {  
+      font-size: 13px;
+      top: 50%;
+      transform: translateY(-50%); }
+
+      .form-row-login select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+.form-control {
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #333;
+  width: 100%;
+  background: none;
+  font-weight: 600; }
+  .form-control::-webkit-input-placeholder {
+    color: #333; }
+  .form-control::-moz-placeholder {
+    color: #333; }
+  .form-control:-ms-input-placeholder {
+    color: #333; }
+  .form-control:-moz-placeholder {
+    color: #333; }
+
+.select {
+  position: relative; }
+  .select .select-control {
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center; }
+  .select .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+    border: 1px solid #4192cb; }
+    .select .dropdown li {
+      padding: 5px 10px; }
+      .select .dropdown li:hover {
+        background: #81acee;
+        color: #fff; }
+    .select .dropdown.active {
+      display: block; }
+
+.section-3 h6 {
+  font-size: 13px;
+  color: #333;
+  padding-top: 5px;
+  margin-bottom: 14px; }
+
+  .inner-pay {
+    padding: 70px;
+    background: #fff;
+    width: 70%;
+    max-width: 600px; /* Defina a largura máxima para evitar que o retângulo fique muito largo em telas grandes */
+    margin: 50px auto; /* Centralize o retângulo na tela */
+    border-radius: 10px; /* Adicione bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adicione uma sombra suave */
+    height: 550px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .inner-pay {
+      padding: 20px; /* Reduzir o espaço de preenchimento */
+      width: 90%; /* Definir uma largura mais flexível */
+      max-width: none; /* Remover a largura máxima */
+      margin: 20px auto; /* Ajustar as margens */
+  }
+}
+
+
+.payment-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.payment-item {
+    width: 48%; /* Ajuste a largura dos itens para caberem na tela */
+    border: 1px solid #e5e5e5;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.payment-logo {
+  width: 50px;
+  padding: 5px;
+}
+
+.payment-item.active {
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.actions ul {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 50px;
+  right: 58px;
+  left: 58px; }
+.actions li a {
+  border: none;
+  display: inline-flex;
+  height: 51px;
+  width: 118px;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  padding-left: 33px;
+  font-size: 15px;
+  position: relative;
+  background: #333; }
+  .actions li a:before {
+    content: "\f2ee";
+    font-family: Material-Design-Iconic-Font;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 32px; }
+  .actions li a:hover {
+    background: #4d4d4d; }
+.actions li:first-child a {
+  background: none;
+  border: 1px solid #333;
+  padding-left: 50px;
+  color: #333; }
+  .actions li:first-child a:before {
+    content: "\f2ea";
+    right: 77px; }
+  .actions li:first-child a:hover {
+    background: #4d4d4d;
+    border-color: transparent;
+    color: #fff; }
+.actions li:last-child a {
+  padding-left: 28px; }
+  .actions li:last-child a:before {
+    right: 27px; }
+.actions li[aria-disabled="true"] a {
+  opacity: 0;
+  transition: all 1s; }
+
+@media (max-width: 1500px) {
+  .steps {
+    bottom: -40px; }
+
+  .wizard {
+    margin-bottom: 25px; } }
+@media (max-width: 1199px) {
+  .steps {
+    bottom: -52px; }
+
+  .wizard {
+    margin-bottom: 0; } }
+@media (max-width: 767px) {
+  body {
+    background: none; }
+
+  .wrapper {
+    height: auto;
+    display: block; }
+
+  .wizard {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 100px; }
+
+  .inner {
+    padding: 30px 20px;
+    height: auto; }
+
+  .actions ul {
+    position: static;
+    margin: 0 20px; }
+
+  .payment-block {
+    display: block; }
+    .payment-block .payment-item {
+      width: 100%; }
+
+  .steps {
+    bottom: -60px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    transform: translateX(0); } }
+
+/*# sourceMappingURL=style.css.map */
+
+.mtp {
+  text-align: center;
+
+}
+/* Estilos para o formulário */
+#forms {
+  display: flex;
+  justify-content: center;
+}
+
+#boleto-form,
+#cartao-form {
+  display: none;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+
+}
+
+#forms h2 {
+  margin-top: 0;
+}
+
+#forms label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#forms input[type="text"],
+#forms select {
+  width: calc(100% - 22px);
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#forms button[type="submit"] {
+  background-color: #5FCF80;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#forms button[type="submit"]:hover {
+  background-color: #4CAF50;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  #forms {
+       flex-direction: column; 
+      justify-content: center;
+  }
+
+  #boleto-form,
+  #cartao-form {
+      max-width: 100%;
+      margin: 0 auto;
+  } 
+
+
+  #forms input[type="text"],
+  #forms select {
+      width: 270px; /* Definindo a largura como 90% */
+  
+  }
+
+  #forms button[type="submit"] {
+      width: 90%; /* Definindo a largura como 90% */
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-login {
+    padding: 20px; /* Reduzir o espaço de preenchimento */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    margin: auto; /* Centralizar na tela */
+    margin-left: 0; /* Remover margem fixa */
+    box-shadow: none; /* Remover sombra em dispositivos móveis */
+  }
+
+  .form-holder {
+    width: 100%; /* Largura total para os campos */
+    margin-right: 0; /* Remover margem direita */
+  }
+
+  .form-holder i {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .form-row-login select,
+  .form-row-login input {
+    width: 100%; /* Largura total para os campos */
+    padding: 12px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+}
+

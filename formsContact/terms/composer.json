@@ -1,0 +1,7 @@
+{
+    "require": {
+        "pdffiller/pdffiller-php-api-client": "^1.0",
+        "tecnickcom/tcpdf": "^6.6",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
