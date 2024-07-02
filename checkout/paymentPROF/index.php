@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    
+
     <!-- External CSS -->
     <link rel="stylesheet" href="../fonts/material-design-iconic-font/css/material-design-iconic-font.css">
     <link rel="stylesheet" href="../vendor/date-picker/css/datepicker.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="inner-pay">
         <div class="avartar">
@@ -51,21 +53,21 @@
                     <label for="cpf">CPF:</label>
                     <input type="text" id="cpf" name="cpf" required><br>
                     <label for="parcelas">Parcelas:</label>
-                    <select id="boleto-parcelas" name="parcelas" onchange="updateTotal('boleto')">          
-                        <option value="1">1x - R$ 2.988,00</option>         
-                        <option value="2">2x - R$ 1.583,64</option>
-                        <option value="3">3x - R$ 1.055,76</option>
-                        <option value="4">4x - R$ 791,82</option>
-                        <option value="5">5x - R$ 633,45</option>
-                        <option value="6">6x - R$ 527,88</option>
-                        <option value="7">7x - R$ 452,46</option>
-                        <option value="8">8x - R$ 395,91</option>
-                        <option value="9">9x - R$ 351,92</option>
-                        <option value="10">10x - R$ 316,72</option>
-                        <option value="11">11x - R$ 287,93</option>
-                        <option value="12">12x - R$ 263,94</option>
+                    <select id="boleto-parcelas" name="parcelas" onchange="updateTotal('boleto')">
+                        <option value="1">1x - R$ 4.079,76</option>
+                        <option value="2">2x - R$ 2.162,27</option>
+                        <option value="3">3x - R$ 1.441,51</option>
+                        <option value="4">4x - R$ 1.080,90</option>
+                        <option value="5">5x - R$ 865,91</option>
+                        <option value="6">6x - R$ 720,76</option>
+                        <option value="7">7x - R$ 617,79</option>
+                        <option value="8">8x - R$ 540,57</option>
+                        <option value="9">9x - R$ 480,51</option>
+                        <option value="10">10x - R$ 432,46</option>
+                        <option value="11">11x - R$ 392,14</option>
+                        <option value="12">12x - R$ 360,38</option>
                     </select>
-                    <div id="total-boleto">Total: R$ 2.988,00</div>
+                    <div id="total-boleto">Total: R$ 4.079,76</div>
                     <button type="submit">Gerar Boleto</button>
                 </form>
             </div>
@@ -84,20 +86,20 @@
                     <input type="text" id="codigo_verificador" name="codigo_verificador" required><br>
                     <label for="parcelas">Parcelas:</label>
                     <select id="cartao-parcelas" name="parcelas" onchange="updateTotal('cartao')">
-                        <option value="1">1x - R$ 2.988,00</option>
-                        <option value="2">2x - R$ 1.494,00</option>
-                        <option value="3">3x - R$ 996,00</option>
-                        <option value="4">4x - R$ 747,00</option>
-                        <option value="5">5x - R$ 597,60</option>
-                        <option value="6">6x - R$ 498,00</option>
-                        <option value="7">7x - R$ 426,85</option>
-                        <option value="8">8x - R$ 373,50</option>
-                        <option value="9">9x - R$ 332,00</option>
-                        <option value="10">10x - R$ 298,80</option>
-                        <option value="11">11x - R$ 271,63</option>
-                        <option value="12">12x - R$ 249,00</option>
+                        <option value="1">1x - R$ 4.079,76</option>
+                        <option value="2">2x - R$ 2.039,88</option>
+                        <option value="3">3x - R$ 1.359,92</option>
+                        <option value="4">4x - R$ 1.019,94</option>
+                        <option value="5">5x - R$ 815,95</option>
+                        <option value="6">6x - R$ 679,96</option>
+                        <option value="7">7x - R$ 582,82</option>
+                        <option value="8">8x - R$ 509,97</option>
+                        <option value="9">9x - R$ 453,31</option>
+                        <option value="10">10x - R$ 407,98</option>
+                        <option value="11">11x - R$ 370,89</option>
+                        <option value="12">12x - R$ 339,98</option>
                     </select>
-                    <div id="total-cartao">Total: R$ 2.988,00</div>
+                    <div id="total-cartao">Total: R$ 4.079,76</div>
                     <button type="submit">Pagar</button>
                 </form>
             </div>
@@ -120,7 +122,7 @@
                 document.getElementById('cartao-form').style.display = 'block';
             } else if (paymentMethod === 'boleto') {
                 document.getElementById('boleto-form').style.display = 'block';
-            } 
+            }
         }
 
         function updateTotal(paymentMethod) {
@@ -129,7 +131,7 @@
 
             let valorTotal;
             if (parcelas === '1') {
-                valorTotal = 2988.00;
+                valorTotal = 4079.76;
             } else {
                 const parcelaValue = parseFloat(optionText.split(' - R$ ')[1]);
                 valorTotal = parcelaValue;
@@ -139,4 +141,5 @@
         }
     </script>
 </body>
+
 </html>

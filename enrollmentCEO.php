@@ -53,7 +53,7 @@
            <img src="assets/img/course-1.jpg" style="width: 350px; height: 350px;" class="img-fluid-ceo" alt="...">
           <div class="course-content-ceo">
              <h3>CEO - Controle Emocional Orientado</h3>
-             <h4>A partir R$ 198,00 mensais</h4>
+             <h4>A partir R$ 339,98 mensais</h4>
               <p>Clique aqui para se inscrever</p>
          </div>
         </div>
@@ -67,7 +67,7 @@
            <img src="assets/img/prof.jpeg" class="img-fluid-ceo" alt="...">
           <div class="course-content-ceo">
              <h3>CEO para Professores</h3>
-             <h4>A partir R$ 249,00 mensais</h4>
+             <h4>A partir R$ 339,98 mensais</h4>
               <p>Clique aqui para se inscrever</p>
          </div>
         </div>

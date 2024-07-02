@@ -104,7 +104,7 @@
 
             <div class="course-info d-flex justify-content-between align-items-center">
               <h5>Apartir de</h5>
-              <p><a href="#">249,00 mensal</a></p>
+              <p><a href="#">339,98 mensal</a></p>
             </div>
 
             <div class="course-info d-flex justify-content-between align-items-center">
@@ -116,7 +116,7 @@
               <h5>Inscreva-se</h5>
               <p><a href="#">no botão abaixo</a></p>
             </div>
-            <button class="btn-inscrever" style="" onclick="window.location.href='checkout/index.php'">Inscreva-se</button>
+            <button class="btn-inscrever" onclick="window.location.href='checkout/index.php'">Inscreva-se</button>
           </div>
         </div>
 

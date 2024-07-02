@@ -207,7 +207,7 @@ function processarPagamentoBoleto($dados) {
 function calcularValorTotal($parcelas) {
     // Substitua aqui pelas condições para calcular o valor total de acordo com o número de parcelas
     // Por exemplo, se o valor original for R$ 2376,00 e o usuário escolher 3 parcelas, o valor total será 792,00
-    $valor_original = 2988.00;
+    $valor_original = 4079.76;
     return $valor_original / $parcelas;
 }
 ?>

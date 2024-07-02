@@ -76,7 +76,7 @@
 
             <div class="course-info d-flex justify-content-between align-items-center">
               <h5>Apartir de</h5>
-              <p><a href="#">198,00 mensal</a></p>
+              <p><a href="#">339,98 mensal</a></p>
             </div>
 
             <div class="course-info d-flex justify-content-between align-items-center">
